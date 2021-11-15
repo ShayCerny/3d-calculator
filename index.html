@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="stage">
+      <div onmouseenter="removeAnimation()" onmouseleave="addAnimation()" id="calculator" class="animate">
+        <figure class="top-top"></figure>
+        <figure class="top-front">
+          <div class="display">
+            <p class="tracking"><span id="lastnumber"></span> <span id="operation"></span></p>
+            <p id="mainnumber"></p>
+          </div>
+        </figure>
+        <figure class="top-left"></figure>
+        <figure class="top-right"></figure>
+        <figure class="top-back"></figure>
+        <figure class="bottom-top">
+          <div class="buttons">
+            <div class="numbers">
+              <div class="btn" onclick="addNumber(1)">1</div>
+              <div class="btn" onclick="addNumber(2)">2</div>
+              <div class="btn" onclick="addNumber(3)">3</div>
+              <div class="btn" onclick="addNumber(4)">4</div>
+              <div class="btn" onclick="addNumber(5)">5</div>
+              <div class="btn" onclick="addNumber(6)">6</div>
+              <div class="btn" onclick="addNumber(7)">7</div>
+              <div class="btn" onclick="addNumber(8)">8</div>
+              <div class="btn" onclick="addNumber(9)">9</div>
+              <div class="btn" onclick="clearDisplay()">C</div>
+              <div class="btn" onclick="addNumber(0)">0</div>
+              <div class="btn" onclick="addNumber('.')">.</div>
+            </div>
+            <div class="operators">
+              <div class="btn" onclick="addOperator('/')">/</div>
+              <div class="btn" onclick="addOperator('x')">x</div>
+              <div class="btn" onclick="addOperator('+')">+</div>
+              <div class="btn" onclick="addOperator('-')">-</div>
+            </div>
+            <div class="equals" onclick="solve()">=</div>
+          </div>
+        </figure>
+        <figure class="bottom-left"></figure>
+        <figure class="bottom-right"></figure>
+        <figure class="bottom-bottom"></figure>
+        <figure class="bottom-front">
+          <p class="created">Made by: Shay Cenry</p>
+        </figure>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
